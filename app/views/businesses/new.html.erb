@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Add a Business</h2>
+  <p>This business will be visible on search after varification</p>
+
+  <%= form_with scope: :business, url: businesses_path, local: true do |form| %>
+    <%= form.label :country_code %>
+    <%= form.country_select :country_code %>
+
+    <%= form.label :business_name %>
+    <%= form.text_field :business_name %>
+
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+
+    <%= form.label :zip_code %>
+    <%= form.text_field :zip_code %>
+
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number %>
+
+    <%= form.label :website %>
+    <%= form.text_field :website %>
+
+    <%= form.label :categories %>
+    <%= form.text_field :categories %>
+
+    <%= form.submit %>
+  <% end %>
+</div>

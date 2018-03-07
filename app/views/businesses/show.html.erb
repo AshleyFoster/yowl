@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 class="business-name"><%= @business.name %></h2>
+  <% @business.categories.each do |category| %>
+    <%= category %>
+  <% end %>
+
+  <div class="business-card">
+    <div class="business-address">
+      <%= @business.address %>
+      <%= @business.city %>
+      <%= @business.state %>
+      <%= @business.zip_code %>
+    </div>
+    <%= link_to "Edit", "#" %>
+    <%= @business.phone_number %>
+    <%= @business.website %>
+  </div>
+</div>
+
